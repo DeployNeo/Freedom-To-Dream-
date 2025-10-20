@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Windows & Office Activation | Made by Neo</title>
+    <meta name="description" content="Frequently Asked Questions about Windows and Office activation methods. Get answers to common questions about HWID, KMS, and Ohook activation.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>Freedom to Dream</span>
+                <span class="made-by">by Neo</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#methods" class="nav-link">Methods</a>
+                <a href="index.html#downloads" class="nav-link">Downloads</a>
+                <a href="index.html#guides" class="nav-link">Guides</a>
+                <a href="faq.html" class="nav-link active">FAQ</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="theme-toggle">
+                    <button id="theme-toggle" class="theme-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FAQ Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about Windows and Office activation</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-page">
+        <div class="container">
+            <div class="faq-search">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="faqSearch" placeholder="Search FAQ..." onkeyup="searchFAQ(this.value)">
+                </div>
+            </div>
+
+            <div class="faq-categories">
+                <button class="category-btn active" onclick="filterFAQ('all')">All Questions</button>
+                <button class="category-btn" onclick="filterFAQ('general')">General</button>
+                <button class="category-btn" onclick="filterFAQ('hwid')">HWID</button>
+                <button class="category-btn" onclick="filterFAQ('kms')">KMS</button>
+                <button class="category-btn" onclick="filterFAQ('ohook')">Ohook</button>
+                <button class="category-btn" onclick="filterFAQ('troubleshooting')">Troubleshooting</button>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-section">
+                    <h2>General Questions</h2>
+                    <div class="faq-items">
+                        <div class="faq-item" data-category="general">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Is this activation method safe and legal?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>All activation methods provided use legitimate Microsoft activation mechanisms. However, you should always ensure you have proper licenses and follow local laws. The tools are open-source and regularly audited for safety.</p>
+                                <div class="warning-box">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>Always use these tools responsibly and in compliance with your local laws.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="general">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What operating systems are supported?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our activation methods support:</p>
+                                <ul>
+                                    <li>Windows 10 (all editions)</li>
+                                    <li>Windows 11 (all editions)</li>
+                                    <li>Windows Server 2016/2019/2022</li>
+                                    <li>Microsoft Office 2016/2019/2021</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="general">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Do I need administrator privileges?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, administrator privileges are required for all activation methods as they need to modify system files and registry entries. Always run the activation scripts as administrator.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="general">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Can I activate multiple computers?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>HWID activation is tied to specific hardware and can only be used on one computer. KMS activation can be used on multiple computers within the same network. Always ensure you have proper licenses for each computer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h2>HWID Activation</h2>
+                    <div class="faq-items">
+                        <div class="faq-item" data-category="hwid">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is HWID activation and how does it work?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>HWID (Hardware ID) activation creates a permanent digital license tied to your computer's hardware. It uses Microsoft's legitimate activation servers to generate a hardware-bound license that survives reinstalls and updates.</p>
+                                <div class="info-box">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>This is the most recommended method for permanent Windows activation.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="hwid">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Will HWID activation survive Windows updates?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, HWID activation is permanent and will survive all Windows updates, feature updates, and even complete reinstalls. The license is tied to your hardware, not the installation.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="hwid">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What if I change my hardware?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>If you change major hardware components (motherboard, CPU), you may need to reactivate. Minor changes like RAM or storage usually don't affect the activation. You can run the HWID activation again on the new hardware.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="hwid">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Does HWID work with Office?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>HWID activation is primarily for Windows. For Office activation, we recommend using the Ohook method which provides permanent offline activation for Microsoft Office products.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h2>KMS Activation</h2>
+                    <div class="faq-items">
+                        <div class="faq-item" data-category="kms">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is KMS activation and how long does it last?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>KMS (Key Management Service) activation provides 180-day activation for Windows and Office. With auto-renewal enabled, it can provide lifetime activation by automatically renewing before expiration.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="kms">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>How do I enable auto-renewal for KMS?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Most KMS scripts include an auto-renewal option. When running the script, select the auto-renewal option to create a scheduled task that will automatically renew your activation before it expires.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="kms">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Can I use KMS for both Windows and Office?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, KMS activation works for both Windows and Office products. It's particularly useful for bulk activation in enterprise environments or when you need to activate multiple products.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="kms">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What if KMS activation fails?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Common KMS activation failures are due to network issues, firewall blocking, or incorrect KMS server addresses. Check your internet connection and ensure the KMS server is accessible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h2>Ohook Activation</h2>
+                    <div class="faq-items">
+                        <div class="faq-item" data-category="ohook">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is Ohook activation and how does it work?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Ohook is a permanent offline activation method specifically designed for Microsoft Office. It modifies Office files to bypass activation checks, providing permanent activation without requiring internet connection or KMS servers.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="ohook">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Which Office versions does Ohook support?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Ohook supports Microsoft Office 2016, 2019, and 2021, including all editions (Home, Professional, etc.). It works with both 32-bit and 64-bit versions of Office.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="ohook">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Is Ohook activation permanent?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, Ohook activation is permanent and will survive Office updates. However, major Office updates may require re-running the Ohook activator to maintain activation.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="ohook">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Do I need to close Office applications before using Ohook?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, it's essential to close all Office applications before running Ohook. The activator needs to modify Office files, which requires exclusive access to them.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h2>Troubleshooting</h2>
+                    <div class="faq-items">
+                        <div class="faq-item" data-category="troubleshooting">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Activation failed with error 0xC004F074</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>This error indicates network connectivity issues with Microsoft's activation servers. Try these solutions:</p>
+                                <ul>
+                                    <li>Check your internet connection</li>
+                                    <li>Try using a different network or VPN</li>
+                                    <li>Disable Windows Firewall temporarily</li>
+                                    <li>Run the script as administrator</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="troubleshooting">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Script is blocked by Windows Defender</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Windows Defender may flag activation scripts as potentially unwanted software. To resolve this:</p>
+                                <ul>
+                                    <li>Add the script folder to Windows Defender exclusions</li>
+                                    <li>Disable real-time protection temporarily</li>
+                                    <li>Download from trusted sources only</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="troubleshooting">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Office activation keeps reverting</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>If Office activation keeps reverting, try these steps:</p>
+                                <ul>
+                                    <li>Ensure all Office applications are closed</li>
+                                    <li>Run the activator as administrator</li>
+                                    <li>Check if Office is properly installed</li>
+                                    <li>Try using a different activation method</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="troubleshooting">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>KMS activation expires too quickly</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>If KMS activation expires quickly, check these:</p>
+                                <ul>
+                                    <li>Ensure auto-renewal is enabled</li>
+                                    <li>Check if the KMS server is accessible</li>
+                                    <li>Verify your system clock is correct</li>
+                                    <li>Try using a different KMS server</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Still Have Questions?</h2>
+            <p>Can't find the answer you're looking for? Contact us for support.</p>
+            <div class="contact-options">
+                <a href="mailto:awm4rkzw@gmail.com" class="contact-btn">
+                    <i class="fas fa-envelope"></i>
+                    Email Support
+                </a>
+                <a href="https://github.com/neo-activation" class="contact-btn">
+                    <i class="fab fa-github"></i>
+                    GitHub Issues
+                </a>
+                <a href="https://discord.gg/neo-activation" class="contact-btn">
+                    <i class="fab fa-discord"></i>
+                    Discord Community
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Freedom to Dream</h3>
+                    <p>Made with ❤️ by Neo</p>
+                    <div class="social-links">
+                        <a href="https://github.com/neo-activation"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/neo_activation"><i class="fab fa-twitter"></i></a>
+                        <a href="https://discord.gg/neo-activation"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#methods">Activation Methods</a></li>
+                        <li><a href="index.html#downloads">Downloads</a></li>
+                        <li><a href="index.html#guides">Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="license.html">License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neo - Freedom to Dream. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ specific JavaScript
+        function searchFAQ(searchTerm) {
+            const term = searchTerm.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+                
+                if (question.includes(term) || answer.includes(term)) {
+                    item.style.display = 'block';
+                    item.style.animation = 'slideInUp 0.3s ease';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function filterFAQ(category) {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            
+            // Update active button
+            categoryBtns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter items
+            faqItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
